@@ -1,3 +1,5 @@
+![Alt text](https://github.com/vmzilla/tux-ai/blob/4feca52f0dda42566893f259220e5eaf87374a01/tux.jpg)
+
 #  TuxAI - Your Linux Command Line AI Assistant
 
 TuxAI is a command-line tool that brings AI assistance directly to your Linux terminal. It allows you to interact with an AI assistant without leaving your workflow or visiting external websites.
@@ -22,6 +24,28 @@ TuxAI is a command-line tool that brings AI assistance directly to your Linux te
 - curl and jq installed on your system
 - Python 3 (for JSON handling)
 - An API key and endpoint for DigitalOcean GenAI Agent
+
+# Installation Guide
+
+- Download the latest release of the script and move it to the `/usr/local/bin/` folder of your system
+
+`wget https://github.com/vmzilla/tux-ai/releases/download/v0.0.0/tuxai`
+
+`cp tuxai /usr/local/bin`
+
+- Make the script executable 
+
+`chmod +x /usr/local/bin/tuxai`
+
+- Create a GenAI Agent on DigitalOcean and export the endpoint, health check end point and secret as variables
+
+```
+export AGENT_ACCESS_KEY="your-access-key"
+export AGENT_ENDPOINT="your-agent-endpoint"
+export HEALTH_CHECK_ENDPOINT="your-agent-health-check-endpoint"
+```
+
+Now you can start using the tuxai CLI
 
 # Usage
 
