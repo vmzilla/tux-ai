@@ -29,7 +29,7 @@ TuxAI is a command-line tool that brings AI assistance directly to your Linux te
 
 - Download the latest release of the script and move it to the `/usr/local/bin/` folder of your system
 
-`wget https://github.com/vmzilla/tux-ai/releases/download/v0.0.0/tuxai`
+`wget https://github.com/vmzilla/tux-ai/releases/download/v0.0.1/tuxai`
 
 `cp tuxai /usr/local/bin`
 
@@ -42,7 +42,6 @@ TuxAI is a command-line tool that brings AI assistance directly to your Linux te
 ```
 export AGENT_ACCESS_KEY="your-access-key"
 export AGENT_ENDPOINT="your-agent-endpoint"
-export HEALTH_CHECK_ENDPOINT="your-agent-health-check-endpoint"
 ```
 
 Now you can start using the tuxai CLI

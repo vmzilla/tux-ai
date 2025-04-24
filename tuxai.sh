@@ -13,23 +13,6 @@ if [ -z "$AGENT_ENDPOINT" ]; then
     exit 1
 fi
 
-if [ -z "$HEALTH_CHECK_ENDPOINT" ]; then
-    echo "Error: HEALTH_CHECK_ENDPOINT environment variable is not set."
-    echo "Please set it using: export HEALTH_CHECK_ENDPOINT=your_health_endpoint"
-    exit 1
-fi
-
-# Function to check the health of the API silently
-check_api_health() {
-    local health_response=$(curl -s "$HEALTH_CHECK_ENDPOINT")
-    if [[ "$health_response" == *"status"*"ok"* ]]; then
-        return 0
-    else
-        echo "Error: API health check failed."
-        return 1
-    fi
-}
-
 # Function to properly escape JSON content
 json_escape() {
     # Use python for reliable JSON string escaping
@@ -69,11 +52,6 @@ query_ai() {
 
 # Main function
 main() {
-    # Silently check API health
-    if ! check_api_health; then
-        exit 1
-    fi
-    
     # Check if input is being piped in
     if [ -t 0 ]; then
         # No piped input, just use command line arguments
