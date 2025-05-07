@@ -29,7 +29,7 @@ TuxAI is a command-line tool that brings AI assistance directly to your Linux te
 
 - Download the latest release of the script and move it to the `/usr/local/bin/` folder of your system
 
-`wget https://github.com/vmzilla/tux-ai/releases/download/v0.0.1/tuxai`
+`wget https://github.com/vmzilla/tux-ai/releases/download/v0.0.2/tuxai`
 
 `cp tuxai /usr/local/bin`
 
